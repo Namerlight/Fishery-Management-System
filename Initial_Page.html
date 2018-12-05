@@ -5,57 +5,125 @@
     <title>Initial Page</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" href="css/boostrap-reboot.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/login_form.css">
+    <link rel="stylesheet" href="css/bootstrap-login-form.css">
+    <script src="js/jquery-login-popup.js"></script>
+    <script src="js/bootstrap-login-popup.js"></script>
 </head>
 <style>
     body {
-
+        position: relative;
+        top: 20px;
+        background-image: url("images/sea_background_image.jpg");
         background-color: #9fcdff;
+        background-size: cover;
+        font-family: "Calibri";
 
-        font-family: "Adobe Arabic";
+    }
+
+    #button {
 
     }
 
     .hero-image {
-        background-image: url("images/header_image.jpg");
+        background-image: url("images/header_fishes_image.jpg");
         background-color: #cccccc;
-        height: 500px;
+        max-width: 1000px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
+        margin: auto;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
 
     .hero-text {
         text-align: center;
         position: relative;
-        background: rgba(159, 205, 255, 0.70);
-        top: 50%;
-        left: 50%;
-        #padding-bottom: 20px;
-        transform: translate(-50%, -50%);
+        background: rgba(159, 205, 255, 0.20);
+        padding-top: 40px;
+        padding-bottom: 40px;
         color: #040505;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .body-box {
+
+        background-color: #2e6da4;
+        max-width: 1000px;
+        margin: auto;
+        align-content: center;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+
     }
 
 </style>
+
+
+
 <body>
+
+
     <div class="hero-image">
         <div class="hero-text">
-            <h1 style="font-size:100px">
+            <h1 style="font-size:70px; color: #b8daff;">
                 Fishery Management System
             </h1>
         </div>
 
     </div>
 
-    <div style="background-color: #005cbf ">
-        <h1>
-            <div style="text-align: center">
-                HELLO WORLD
-                <a href="Administrative_Panel.html">Enter as Admin</a>
+    <div class="body-box">
+        <div style="background-color: #005cbf ">
+            <h1>
+                <div style="text-align: center">
+                    <button type="button">About Us</button><button type="button">Place Order</button><button type="button">Register Account</button><button type="button" data-toggle="modal" data-target="#myModal">Login</button>
+                    <a href="Administrative_Panel.html">Enter as Admin</a>
+                </div>
+            </h1>
+        </div>
+
+        <h4><center>Main<br>Container</center></h4>
+
+
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Login</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+
+                            <form class="form-signin">
+                                <label for="inputEmail" class="sr-only">Email address</label>
+                                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                                <label for="inputPassword" class="sr-only">Password</label>
+                                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                <div class="checkbox mb-3">
+                                    <label>
+                                        <input type="checkbox" value="remember-me"> Remember me
+                                    </label>
+                                </div>
+                                <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin: auto">Sign in</button>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </h1>
+
+        </div>
+
     </div>
 
-</body>
+
+</>
 </html>
