@@ -2,33 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Admin Page</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/boostrap-reboot.css">
 </head>
 
 <style>
-    body {
 
-        background-color: wheat;
+    body {
+        top: 20px;
+        position: relative;
+        background-image: url("images/sea_background_image.jpg");
+        background-color: #9fcdff;
+        background-size: cover;
+        font-family: "Calibri";
     }
+
+    .body-box {
+
+        background-color: #2e6da4;
+        max-width: 500px;
+        margin: auto;
+        align-content: center;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+
+    }
+
 </style>
 
 <body>
 
-    <div style="text-align: center">
 
-        <form class="form-signin">
-            <label for="inputEmail">Email addr</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-            <label for="inputPassword">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-            
-            <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin: auto">Sign in</button>
-        </form>
+    <div class="body-box">
+
+        <div style="text-align: center">
+
+            <form class="form-signin">
+                <label for="inputEmail">Email addr</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <label for="inputPassword">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin: auto">Sign in</button>
+            </form>
+
+        </div>
 
     </div>
+
+
 
 </body>
 </html>
