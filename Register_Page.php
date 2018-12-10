@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php include ('connectDB.php'); ?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,10 +26,7 @@
         max-width: 500px;
         margin: auto;
         align-content: center;
-        border-top-right-radius: 30px;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
+        border-radius: 30px;
 
     }
 
@@ -68,16 +66,19 @@
 
             <br>
 
-            <a href="Registration_Submit.php" class="btn btn-light">Register Account</a>
+            <button type="submit" name="RegisterAccount" class="btn btn-lg btn-primary btn-block" value="Submit">Submit Form</button>
 
-            <input type="submit" name="RegisterAccount" class="btn btn-lg btn-primary btn-block" value="Submit">
+        </form>
 
+        <form action="action.php" method="post">
+            <p>Your name: <input type="text" name="name" /></p>
+            <p>Your age: <input type="text" name="age" /></p>
+            <p><input type="submit" /></p>
         </form>
 
     </div>
 
-</div>
-
-
 </body>
 </html>
+
+<?php include('connectClose.php'); ?>

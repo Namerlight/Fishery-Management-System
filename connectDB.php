@@ -1,11 +1,14 @@
 <?php
 
-$db['hostname'] = "localhost";
-$db['user'] = "root";
-$db['password']="";
-$db ['database'] = "fms";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fms";
 
-$con = mysqli_connect ($db['hostname'],$db['user'],$db['password'],$db['database']);
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 if (mysqli_connect_errno()) {
     echo "Failed to connect to MYSQL: " . mysqli_connect_error();
