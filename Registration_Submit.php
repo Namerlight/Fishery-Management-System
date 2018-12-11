@@ -14,13 +14,15 @@
         $password = md5($Password_1);
 
         $sql = "INSERT INTO customer( user_id, user_flag, name, phone, address, email, password) 
-            VALUES( 350, '($User_type), '($Username)', '($Contact_number)', '($Address)', '($Email)', '($password)' )";
+            VALUES( 500 , '$User_type', '$Username', '$Contact_number', '$Address', '$Email', '$password' )";
 
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
             } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
             }
+
+
 
     }
 

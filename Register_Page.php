@@ -66,14 +66,8 @@
 
             <br>
 
-            <button type="submit" name="RegisterAccount" class="btn btn-lg btn-primary btn-block" value="Submit">Submit Form</button>
+            <button type="submit" name="RegisterAccount" class="btn btn-lg btn-primary btn-block" value="Submit">Submit. You will be automatically redirected.</button>
 
-        </form>
-
-        <form action="action.php" method="post">
-            <p>Your name: <input type="text" name="name" /></p>
-            <p>Your age: <input type="text" name="age" /></p>
-            <p><input type="submit" /></p>
         </form>
 
     </div>
