@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,6 +62,8 @@
 
 </style>
 
+<form id="form-signin" action="Logout" method="post">
+</form>
 
 
 <body>
@@ -76,11 +84,28 @@
                     <a href="#" class="btn btn-light">Browse Fishes</a>
                     <a href="Register_Page.php" class="btn btn-light">Register Account</a>
                     <a href="Login_page.php" class="btn btn-light">Login</a>
+
                 </div>
             </h1>
         </div>
 
-        <h4><center>i'm<br>lonely</center></h4> 
+    <div class="body-content" style="padding: 20px; margin: auto; color: white">
+
+        <h2>
+
+        Welcome,
+
+        <?php echo implode($_SESSION); ?>
+
+        <br>Click on Browse Fish to check our stock.
+        <br>Click on Order to place an order with us.
+        <br>Click on Profile to change your User Info.
+
+        </h2>
+
+    </div>
+
+        <button type="submit" name="SignIn" class="btn btn-lg btn-primary" value="Logout">Logout.</button>
 
     </div>
 
