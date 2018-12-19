@@ -18,12 +18,12 @@
             VALUES('$user_id', '$User_type', '$Username', '$Contact_number', '$Address', '$Email', '$password' )";
 
         if ($conn->query($sql) === TRUE) {
+            header('location:Initial_Page.php');
             echo "New record created successfully";
-            } else {
+        } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
-            }
-
-
+            header('location:Register_Page.php');
+        }
 
     }
 

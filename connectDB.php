@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "fms";
+$dbname = "fms_test";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {

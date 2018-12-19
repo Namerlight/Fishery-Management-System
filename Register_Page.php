@@ -6,7 +6,7 @@
     <title>Register Page</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" href="css/boostrap-reboot.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
 </head>
 
 <style>

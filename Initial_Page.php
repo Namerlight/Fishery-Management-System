@@ -1,8 +1,4 @@
-<?php
-
-session_start();
-
-?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +18,6 @@ session_start();
         background-color: #9fcdff;
         background-size: cover;
         font-family: "Calibri";
-
     }
 
     .hero-image {
@@ -62,8 +57,6 @@ session_start();
 
 </style>
 
-<form id="form-signin" action="Logout" method="post">
-</form>
 
 
 <body>
@@ -81,9 +74,13 @@ session_start();
         <div style="background-color: white; ">
             <h1>
                 <div class="btn-group-lg btn-group-justified">
-                    <a href="#" class="btn btn-light">Browse Fishes</a>
+                    <a href="Browsing_Page.php" class="btn btn-light">Browse Inventory</a>                    
+                    <a href="Orders_Page.php" class="btn btn-light">Place Order</a>
+                    <a href="User_Profile.php" class="btn btn-light">User Profile</a>
                     <a href="Register_Page.php" class="btn btn-light">Register Account</a>
-                    <a href="Login_page.php" class="btn btn-light">Login</a>
+                    <a href="Login_Page.php" class="btn btn-light">Login</a>
+                    <a href="Admin_Panel.php" class="btn btn-light">Admin Panel</a>
+                    
 
                 </div>
             </h1>
@@ -93,9 +90,9 @@ session_start();
 
         <h2>
 
-        Welcome,
+        Welcome, 
 
-        <?php echo implode($_SESSION); ?>
+        <?php echo $_SESSION["Username"]; ?>
 
         <br>Click on Browse Fish to check our stock.
         <br>Click on Order to place an order with us.
@@ -105,7 +102,17 @@ session_start();
 
     </div>
 
-        <button type="submit" name="SignIn" class="btn btn-lg btn-primary" value="Logout">Logout.</button>
+        <form id="form-signin" action="Initial_Page.php" method="post">
+            <button type="submit" name="Logout" class="btn btn-lg btn-primary btn-block" value="Logout">Logout</button>
+        </form>
+
+        <?php
+
+        if(isset($_POST['Logout'])) {
+            session_destroy();
+        }
+
+        ?>
 
     </div>
 
