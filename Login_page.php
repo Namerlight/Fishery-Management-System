@@ -12,7 +12,7 @@
 <style>
 
     body {
-        top: 20px;
+        top: -5px;
         position: relative;
         background-image: url("images/sea_background_image.jpg");
         background-color: #9fcdff;
@@ -26,42 +26,27 @@
         max-width: 500px;
         margin: auto;
         align-content: center;
-        border-top-right-radius: 30px;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
+        border-radius: 30px;
 
     }
 
 </style>
 
 <body>
-
-
     <div class="body-box">
-
-        <div style="text-align: left; color: white; margin: auto; padding-left: 10px; padding-right: 10px; padding-top: 20px; padding-bottom: 30px;">
-
+        <div style="text-align: left; color: white; margin: auto; padding-left: 10px; padding-right: 10px; padding-top: 20px; padding-bottom: 20px;">
             <form class="form-signin" action="Login_Submit.php" method="POST">
-
                 <label for="inputUser">Username</label>
                 <input type="text" name="inputUser" class="form-control" placeholder="Username">
-                <!--name of the field for entering username is inputUser-->
-
+                <!--the name of the field for entering username is inputUser-->
                 <label for="inputPassword">Password</label>
                 <input type="password" name="inputPassword" class="form-control" placeholder="Password" required>
-                <!--name of the field for entering password is inputPassword-->
-
+                <!--the name of the field for entering password is inputPassword-->
                 <br>
                 <button type="submit" name="SignIn" class="btn btn-lg btn-primary btn-block" value="Submit">Login.</button>
             </form>
-
         </div>
-
     </div>
-
-
-
 </body>
 </html>
 
